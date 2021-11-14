@@ -69,21 +69,8 @@ The path or URL to the snapshot file that will be used for the initial import of
 
 The path or URL to the snapshot file that will be used for the initial import of your node. The snapshot will be downloaded to the target host's filesystem and mounted via a volume into a short-lived docker image responsible for the import process.
 
-        snapshot_tmp_file: /tmp/snapshot
+    snapshot_tmp_file: /tmp/snapshot
 
-
-## Example Playbook
-----------------
-
-For mainnet:
-
-    - hosts: servers
-      roles:
-        - role: ecadlabs.tezos_node
-          bootstrap_strategy: snapshot
-          snapshot_url: https://mainnet.xtz-shots.io/full # See https://xtz-shots.io/
-          tezos_network: mainnet
-          snapshot_tmp_file: /tmp/snapshot
 
 ## License
 -------
