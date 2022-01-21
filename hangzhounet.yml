@@ -1,0 +1,6 @@
+- hosts: localhost
+  roles:
+    - role: ansible-tezos
+      bootstrap_strategy: snapshot
+      snapshot_url: https://snapshot-api.tezos.marigold.dev/testnet
+      tezos_network: hangzhounet

@@ -13,8 +13,8 @@ You will need write access on node folder volume, the default folder is inside o
 
 This is one way to do:
 ```
-sudo chmod 777 -R granadanet_client
-sudo chmod 777 -R granadanet_node
+sudo chmod 777 -R hangzhounet_client
+sudo chmod 777 -R hangzhounet_node
 # or
 sudo chmod 777 -R mainnet_client
 sudo chmod 777 -R mainnet_node
@@ -29,7 +29,7 @@ cd tezos-node-ansible
 
 And finally, just run some of the following commands depending on what network you want to execute:
 ``` bash
-sudo ansible-playbook granadanet.yml
+sudo ansible-playbook hangzhounet.yml
 # or
 sudo ansible-playbook mainnet.yml
 ```

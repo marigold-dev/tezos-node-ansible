@@ -1,6 +1,0 @@
-- hosts: localhost
-  roles:
-    - role: ansible-tezos
-      bootstrap_strategy: snapshot
-      snapshot_url: https://granadanet.xtz-shots.io/rolling
-      tezos_network: granadanet
