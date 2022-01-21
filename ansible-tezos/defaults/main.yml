@@ -1,7 +1,7 @@
 ---
 # defaults file for roles/tezos_node_envoy_proxy
 
-tezos_docker_image: tezos/tezos:v10.3
+tezos_docker_image: tezos/tezos:v11.1
 
 node_rpc_url: "http://{{ tezos_network }}_node:{{ RPC_PORT_INTERNAL }}"
 node_data_dir: "~/tezos/{{ tezos_network }}_node"
