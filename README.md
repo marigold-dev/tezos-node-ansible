@@ -9,17 +9,6 @@ First, make sure you have ansible and docker installed on your machine:
 * [Docker](https://docs.docker.com/engine/install/)
 
 
-You will need write access on node folder volume, the default folder is inside of ~/tezos/
-
-This is one way to do:
-```
-sudo chmod 777 -R hangzhounet_client
-sudo chmod 777 -R hangzhounet_node
-# or
-sudo chmod 777 -R mainnet_client
-sudo chmod 777 -R mainnet_node
-```
-
 Get the repository and enter the folder:
 ``` bash
 git clone https://github.com/marigold-dev/tezos-node-ansible

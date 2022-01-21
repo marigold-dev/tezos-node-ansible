@@ -17,6 +17,7 @@
   file:
     dest: "{{ item }}"
     state: directory
+    mode: u=rwX,g=rwX,o=rwX
     owner: "100"
   with_items:
     - "{{ node_data_dir }}"
@@ -35,7 +36,7 @@
     owner: "100"
 
 - name: generate tezos-node config "{% if network_name is defined %}{{ network_name }}{% else %}{{ tezos_network }}{% endif %}"
-  when:  not has_config.stat.exists and tezos_node_config_template is undefined
+  when: not has_config.stat.exists and tezos_node_config_template is undefined
   docker_container:
     name: init_tezos_node_config
     image: "{{ tezos_docker_image }}"
@@ -115,7 +116,7 @@
   register: has_client_config
 
 - name: generate tezos-client config "{% if network_name is defined %}{{ network_name }}{% else %}{{ tezos_network }}{% endif %}"
-  when:  not has_client_config.stat.exists
+  when: not has_client_config.stat.exists
   docker_container:
     name: init_tezos_client_config
     image: "{{ tezos_docker_image }}"
