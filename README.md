@@ -18,9 +18,14 @@ cd tezos-node-ansible
 
 And finally, just run some of the following commands depending on what network you want to execute:
 ``` bash
-sudo ansible-playbook hangzhounet.yml
+ansible-playbook hangzhounet.yml
 # or
-sudo ansible-playbook mainnet.yml
+ansible-playbook mainnet.yml
+```
+
+If you are having problems with permission on `.ansible` folder:
+```
+sudo chown -R $USER ~/.ansible
 ```
 
 ## Default Variables

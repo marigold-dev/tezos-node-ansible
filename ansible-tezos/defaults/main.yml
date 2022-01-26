@@ -17,7 +17,7 @@ P2P_PORT_INTERNAL: 9732
 history_mode: full
 
 # Location of temp file for snapshot import
-snapshot_tmp_file: /tmp/snapshot
+snapshot_tmp_file: ~/tezos/snapshot
 
 # genesis or snapshot
 bootstrap_strategy: genesis

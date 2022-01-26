@@ -17,8 +17,6 @@
   file:
     dest: "{{ item }}"
     state: directory
-    mode: u=rwX,g=rwX,o=rwX
-    owner: "100"
   with_items:
     - "{{ node_data_dir }}"
     - "{{ client_data_dir }}"
