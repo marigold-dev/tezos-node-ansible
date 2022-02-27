@@ -8,7 +8,7 @@
 
 - name: change node and client directory names
   set_fact:
-    node_data_dir: "~/tezos/{{ tezos_network }}_notade"
+    node_data_dir: "~/tezos/{{ tezos_network }}_node"
     client_data_dir: "~/tezos/{{ tezos_network }}_client"
     node_rpc_url: "{% if node_rpc_url is defined %}{{ node_rpc_url }}{% else %}http://{{ network_name }}_node:{{ RPC_PORT_INTERNAL }}{% endif %}"
   when: network_name is defined
@@ -51,7 +51,6 @@
       --rpc-addr :{{ RPC_PORT_INTERNAL }}
       --rpc-addr 0.0.0.0:{{ RPC_PORT_INTERNAL }}
       --allow-all-rpc {{ RPC_PORT_INTERNAL }}
-      --config-file=/data/node/config.json
 
 - name: check if an identity exists
   stat:
@@ -72,7 +71,6 @@
     entrypoint: tezos-node
     command: >
       identity generate
-      --config-file=/data/node/config.json
       --data-dir=/data/node/
   when: not has_identity.stat.exists
 
